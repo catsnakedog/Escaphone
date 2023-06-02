@@ -31,5 +31,12 @@ public class swap : MonoBehaviour
                 }
             }
         }
+        else if (Input.GetMouseButtonDown(1)) // 오른쪽 마우스 버튼 클릭
+        {
+            if (selectedObject != null)
+            {
+                selectedObject.Rotate(0f, 0f, 90f); // 선택된 객체를 90도 오른쪽으로 회전
+            }
+        }
     }
 }
