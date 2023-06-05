@@ -56,13 +56,14 @@ public class SoundManager : MonoBehaviour
     {
         SoundPooling(); // 사운드 파일들을 풀링 해온다
         SetAudioSource(); // 오디오 소스 세팅
-        Play("홈화면");
+        Play("홈화면"); // test
     }
 
     void OptionSetting()
     {
         GameObject optionCanvas = Resources.Load<GameObject>("Prefabs/OptionCanvas"); // 옵션 프리펩 불러오기
         this.optionCanvas = Instantiate(optionCanvas);
+        this.optionCanvas.SetActive(false);
         optionCanvas.GetComponent<Canvas>().worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>(); // 옵션 켄버스에 카메라 연결
         BGMSlider = this.optionCanvas.transform.GetChild(2).GetComponent<Slider>();
         SFXSlider = this.optionCanvas.transform.GetChild(3).GetComponent<Slider>();
