@@ -20,6 +20,6 @@ public class ObjectGet : MonoBehaviour
             return;
         }
         Single.saveData.inGameData.itemList.Add(name);
-        isActive = false;
+        gameObject.SetActive(false);
     }
 }

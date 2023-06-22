@@ -28,11 +28,11 @@ public class InGame : MonoBehaviour
         Single = DataManager.Single;
         BG = transform.GetChild(0).gameObject;
         objects = transform.GetChild(1).gameObject;
-        inventoryBT = transform.GetChild(2).gameObject;
-        inventory = transform.GetChild(3).gameObject;
-        detail = transform.GetChild(4).gameObject;
-        option = transform.GetChild(5).gameObject;
-        changeView = transform.GetChild(6).gameObject;
+        inventoryBT = transform.GetChild(3).gameObject;
+        inventory = transform.GetChild(4).gameObject;
+        detail = transform.GetChild(5).gameObject;
+        option = transform.GetChild(6).gameObject;
+        changeView = transform.GetChild(7).gameObject;
         sound = GameObject.FindWithTag("Sound").transform.GetChild(0).gameObject;
         itemObject = new List<GameObject>();
 

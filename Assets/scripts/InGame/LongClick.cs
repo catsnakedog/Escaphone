@@ -53,7 +53,7 @@ public class LongClick : MonoBehaviour
     void TimeCount()
     {
         count += Time.deltaTime;
-        if(count > 2f)
+        if(count >= 1f)
         {
             detail.SetActive(true);
             isLongClick = true;
