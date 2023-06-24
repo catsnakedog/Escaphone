@@ -11,7 +11,6 @@ public class InGame : MonoBehaviour
     DataManager Single;
 
     GameObject BG;
-    GameObject objects;
     GameObject option;
     GameObject changeView;
     GameObject inventoryBT;
@@ -27,13 +26,11 @@ public class InGame : MonoBehaviour
     {
         Single = DataManager.Single;
         BG = transform.GetChild(0).gameObject;
-        objects = transform.GetChild(1).gameObject;
-        inventoryBT = transform.GetChild(3).gameObject;
-        inventory = transform.GetChild(4).gameObject;
-        detail = transform.GetChild(5).gameObject;
-        option = transform.GetChild(6).gameObject;
-        changeView = transform.GetChild(7).gameObject;
-        sound = GameObject.FindWithTag("Sound").transform.GetChild(0).gameObject;
+        inventoryBT = transform.GetChild(2).gameObject;
+        inventory = transform.GetChild(3).gameObject;
+        detail = transform.GetChild(4).gameObject;
+        option = transform.GetChild(5).gameObject;
+        changeView = transform.GetChild(6).gameObject;
         itemObject = new List<GameObject>();
 
         List<string> temp = new List<string>();
@@ -52,6 +49,13 @@ public class InGame : MonoBehaviour
         option.GetComponent<Button>().onClick.AddListener(Option);
         changeView.GetComponent<Button>().onClick.AddListener(ChangeView);
         inventoryBT.GetComponent<Button>().onClick.AddListener(Inventory);
+
+        Invoke("SoundSetting", 0.5f);
+    }
+
+    void SoundSetting()
+    {
+        sound = GameObject.FindWithTag("Sound").transform.GetChild(0).gameObject;
     }
 
     void Option()

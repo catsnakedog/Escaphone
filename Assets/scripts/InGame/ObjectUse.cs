@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ObjectGet : MonoBehaviour
+public class ObjectUse : MonoBehaviour
 {
     DataManager Single;
-
-    public string name;
+    [SerializeField]
+    GameObject obj;
     public string condition;
-    bool isActive;
+    [SerializeField]
+    int effectType;
 
     void Start()
     {
@@ -18,7 +19,7 @@ public class ObjectGet : MonoBehaviour
     }
     public void Get()
     {
-        if(condition != "")
+        if (condition != "")
         {
             if (Single.saveData.inGameData.usingItem != condition)
             {
@@ -26,11 +27,17 @@ public class ObjectGet : MonoBehaviour
             }
         }
 
-        if(name != "")
-        {
-            Single.saveData.inGameData.itemList.Add(name);
-            GameObject.FindWithTag("InGame").GetComponent<InGame>().UISetting();
-        }
+        Invoke("ObjEffect" + effectType, 0f);
         gameObject.SetActive(false);
+    }
+
+    void ObjEffect1()
+    {
+        obj.SetActive(false);
+    }
+
+    void ObjEffect2()
+    {
+        obj.SetActive(true);
     }
 }

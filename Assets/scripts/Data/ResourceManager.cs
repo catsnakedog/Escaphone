@@ -9,6 +9,18 @@ public class ResourceManager
         test1,
         test2,
         test3,
+        memo4_1,
+        memo4_2,
+        memo4_3,
+        key,
+        cable,
+        card,
+        hammer,
+        powder,
+        potion1,
+        potion2,
+        potion3,
+        acid,
     }
     
     public Dictionary<string, Sprite> itemSprite;

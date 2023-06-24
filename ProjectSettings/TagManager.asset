@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sound
+  - Inventory
+  - Detail
+  - InventoryBT
+  - InGame
   layers:
   - Default
   - TransparentFX

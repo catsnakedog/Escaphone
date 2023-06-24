@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LongClick : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class LongClick : MonoBehaviour
         else
         {
             Single.saveData.inGameData.usingItem = Single.saveData.inGameData.itemList[number-1];
+            GameObject.FindWithTag("InventoryBT").transform.GetChild(0).GetComponent<Image>().sprite = Single.resource.itemSprite[Single.saveData.inGameData.usingItem];
         }
     }
 
@@ -55,6 +57,7 @@ public class LongClick : MonoBehaviour
         count += Time.deltaTime;
         if(count >= 1f)
         {
+            detail.transform.GetChild(1).GetComponent<Image>().sprite = Single.resource.itemSprite[Single.saveData.inGameData.itemList[number - 1]];
             detail.SetActive(true);
             isLongClick = true;
         }

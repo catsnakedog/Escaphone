@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class Password : MonoBehaviour
 {
+    [SerializeField]
+    GameObject obj;
+    [SerializeField]
+    int type;
     Text passwordText;
     public List<int> correctPassword = new List<int>();
     public List<int> inputPassword = new List<int>();
@@ -49,7 +53,7 @@ public class Password : MonoBehaviour
         {
             passwordText.text = "CORRECT";
             Debug.Log("clear");
-            // 클리어시 행동 여기다가 추가
+            Invoke("objEffect" + type, 0f);
         }
         else
         {
@@ -63,5 +67,10 @@ public class Password : MonoBehaviour
         inputPassword.Clear();
         cnt = 0;
         passwordText.text = "";
+    }
+
+    void objEffect1()
+    {
+        obj.SetActive(true);
     }
 }
