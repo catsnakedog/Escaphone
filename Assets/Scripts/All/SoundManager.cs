@@ -30,7 +30,8 @@ public class SoundManager : MonoBehaviour
 
     enum BGM
     {
-        홈화면,
+        MainSound,
+        InGameSound,
         MaxCount
     }
 
@@ -56,7 +57,6 @@ public class SoundManager : MonoBehaviour
     {
         SoundPooling(); // 사운드 파일들을 풀링 해온다
         SetAudioSource(); // 오디오 소스 세팅
-        Play("홈화면"); // test
     }
 
     void OptionSetting()
