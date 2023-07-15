@@ -28,14 +28,14 @@ public class SoundManager : MonoBehaviour
 
     GameObject optionCanvas;
 
-    enum BGM
+    public enum BGM
     {
         MainSound,
         InGameSound,
         MaxCount
     }
 
-    enum SFX
+    public enum SFX
     {
         MaxCount
     }
@@ -52,9 +52,7 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    void Start()
-    {
+
         SoundPooling(); // 사운드 파일들을 풀링 해온다
         SetAudioSource(); // 오디오 소스 세팅
     }

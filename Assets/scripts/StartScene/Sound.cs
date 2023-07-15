@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
+    public string soundName;
+
     void Start()
     {
-        SoundManager.sound.Play("mainSound");
+        SoundManager.sound.Play(soundName);
     }
 }
