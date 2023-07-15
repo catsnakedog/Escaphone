@@ -12,6 +12,7 @@ public class ResourceManager
         memo4_1,
         memo4_2,
         memo4_3,
+        memo4_4,
         key,
         cable,
         card,

@@ -15,7 +15,10 @@ public class ObjectUse : MonoBehaviour
     void Start()
     {
         Single = DataManager.Single;
-        gameObject.AddComponent<Button>().onClick.AddListener(Get);
+        if(gameObject.GetComponent<Button>() == null)
+        {
+            gameObject.AddComponent<Button>().onClick.AddListener(Get);
+        }
     }
     public void Get()
     {
