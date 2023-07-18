@@ -22,6 +22,18 @@ public class ResourceManager
         potion2,
         potion3,
         acid,
+        longladder,
+        shortladder,
+        food1,
+        food2,
+        food3,
+        oil,
+        keybundle,
+        lock1,
+        flashlight,
+        fabric,
+        driver,
+        cutter
     }
     
     public Dictionary<string, Sprite> itemSprite;
