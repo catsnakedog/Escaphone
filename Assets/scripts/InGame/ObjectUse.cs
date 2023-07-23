@@ -11,6 +11,9 @@ public class ObjectUse : MonoBehaviour
     public string condition;
     [SerializeField]
     int effectType;
+    [SerializeField]
+    GameObject secondObj;
+    
 
     void Start()
     {
@@ -42,5 +45,11 @@ public class ObjectUse : MonoBehaviour
     void ObjEffect2()
     {
         obj.SetActive(true);
+    }
+
+    void ObjEffect3()
+    {
+        obj.SetActive(true);
+        secondObj.SetActive(true);
     }
 }
